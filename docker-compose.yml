@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    image: hackathon-delta-lake
+    build: .
+    command: make build
+    volumes:
+      - ~/.sbt:/root/.sbt
+      - ~/.ivy2:/root/.ivy2
+      - ./target:/app/target
